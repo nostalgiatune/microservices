@@ -1,0 +1,13 @@
+- name: Provision development machine
+  hosts: localhost
+  become: yes
+  pre_tasks:
+   - name: Test ansible
+     debug: msg="Ansible works"
+  roles:
+   - docker.ubuntu
+  post_tasks:
+   - name: Add Vagrant to Docker group
+     user: name=vagrant groups=docker append=yes
+   - name: Roles installed
+     debug: msg="Roles installed"
