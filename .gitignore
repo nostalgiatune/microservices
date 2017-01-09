@@ -1,1 +1,4 @@
 machines/dev/.vagrant
+projects/message-producer-service/.project
+projects/message-producer-service/.classpath
+projects/message-producer-service/.settings/
